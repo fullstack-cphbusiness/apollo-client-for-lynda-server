@@ -9,7 +9,7 @@ interface IKeyableFriend extends ILyndaFriend {
   [key: string]: any
 }
 const AddFriend = ({ initialFriend }: AddFriendProps) => {
-  const EMPTY_FRIEND: ILyndaFriend = { firstName: "", lastName: "", gender: Gender.OTHER, age: "", email: "" }
+   const EMPTY_FRIEND: ILyndaFriend = { firstName: "", lastName: "", gender: "OTHER", age: -1, email: "" }
   let newFriend = initialFriend ? initialFriend : { ...EMPTY_FRIEND }
 
   const [friend, setFriend] = useState({ ...newFriend })
